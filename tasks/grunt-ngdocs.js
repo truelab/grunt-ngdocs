@@ -58,6 +58,13 @@ module.exports = function(grunt) {
       }
     }
 
+    if (options.favicon) {
+      if (!/^((https?:)?\/\/|\.\.\/)/.test(options.favicon)) {
+          grunt.file.copy(options.favicon, path.join(options.dest, 'img', options.favicon));
+          options.favicon = "img/" + options.favicon;
+      }
+    }
+
     options.styles = _.map(options.styles, function(file) {
       if (/^((https?:)?\/\/|\.\.\/)/.test(file)) {
         return file;
@@ -136,6 +143,7 @@ module.exports = function(grunt) {
           analytics: options.analytics,
           navContent: options.navContent,
           title: options.title,
+          favicon : options.favicon,
           image: options.image,
           titleLink: options.titleLink,
           imageLink: options.imageLink,

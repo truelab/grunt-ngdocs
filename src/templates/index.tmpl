@@ -11,6 +11,10 @@
                  Declarative templates with data-binding, MVC, dependency injection and great
                  testability story all implemented with pure client-side JavaScript!">
   <meta name="fragment" content="!">
+  <% if(favicon) { %>
+    <link rel="icon" type="image/png" href="<%= favicon %>">
+  <% } %>
+
   <title ng-bind-template="<%= title || 'Doc' %>: {{partialTitle}}">Docs</title>
   <script type="text/javascript">
     // dynamically add base tag as well as css and javascript files.
