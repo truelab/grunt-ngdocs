@@ -5,7 +5,7 @@
   "main": "tasks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/m7r/grunt-ngdocs.git"
+    "url": "https://github.com/truelab/grunt-ngdocs.git"
   },
   "keywords": [
     "gruntplugin",
